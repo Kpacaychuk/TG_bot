@@ -705,3 +705,25 @@ telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', RemoteDis
 2024-10-10 03:56:05,768 - paramiko.transport - INFO - Authentication (password) successful!
 2024-10-10 03:58:27,964 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
 2024-10-10 03:58:27,965 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2024-10-10 03:58:56,947 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-10 03:59:03,885 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:59:05,046 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:59:05,091 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:59:31,260 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:59:32,330 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:59:32,376 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 04:00:02,954 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 04:00:04,018 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 04:00:04,064 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 04:01:30,482 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 04:01:31,546 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 04:01:31,592 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 04:02:48,587 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 04:02:49,668 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 04:02:49,713 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 04:03:19,148 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 04:03:20,213 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 04:03:20,259 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 04:03:56,821 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 04:03:57,888 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 04:03:57,933 - paramiko.transport - INFO - Authentication (password) successful!

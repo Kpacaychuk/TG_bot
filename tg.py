@@ -226,7 +226,7 @@ def get_ps(update: Update, context: CallbackContext):
         if release_info:
             update.message.reply_text(f"{release_info}")
         else:
-            update.message.reply_text("Не удалось получить информацию о релизе.")
+            update.message.reply_text("Не удалось получить информацию.")
     except Exception as e:
         update.message.reply_text(f"Ошибка: {str(e)}")
     finally:
@@ -242,7 +242,7 @@ def get_ss(update: Update, context: CallbackContext):
         if release_info:
             update.message.reply_text(f"{release_info}")
         else:
-            update.message.reply_text("Не удалось получить информацию о релизе.")
+            update.message.reply_text("Не удалось получить информацию.")
     except Exception as e:
         update.message.reply_text(f"Ошибка: {str(e)}")
     finally:
@@ -315,7 +315,7 @@ def get_services(update: Update, context: CallbackContext):
         if release_info:
             update.message.reply_text(f"{release_info}")
         else:
-            update.message.reply_text("Не удалось получить информацию о релизе.")
+            update.message.reply_text("Не удалось получить информацию.")
     except Exception as e:
         update.message.reply_text(f"Ошибка: {str(e)}")
     finally:
