@@ -1,0 +1,707 @@
+2024-10-09 13:40:52,973 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-09 13:45:53,959 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2024-10-09 13:45:53,959 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2024-10-09 13:47:13,353 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-09 13:47:48,775 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2024-10-09 13:47:48,775 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2024-10-09 13:47:55,250 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-09 13:48:51,576 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2024-10-09 13:48:51,576 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2024-10-09 13:49:00,507 - telegram.ext.updater - WARNING - Exiting immediately!
+2024-10-09 13:49:06,246 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-09 14:41:06,087 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2024-10-09 14:41:06,087 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2024-10-09 16:22:25,736 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-09 16:26:10,236 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2024-10-09 16:26:10,244 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2024-10-09 16:26:14,169 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-09 16:27:46,214 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026D5CD0BC90>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot8165588443:AAHouVo8OuxnVoZJcBwT1jMMrQ6QuLiMIaE/getUpdates
+2024-10-09 16:27:56,240 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026D5B8C2E10>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot8165588443:AAHouVo8OuxnVoZJcBwT1jMMrQ6QuLiMIaE/getUpdates
+2024-10-09 16:28:11,054 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connectionpool.HTTPSConnectionPool object at 0x0000026D5CC96B10>, 'Connect timed out. (connect timeout=5.0)')': /bot8165588443:AAHouVo8OuxnVoZJcBwT1jMMrQ6QuLiMIaE/getUpdates
+2024-10-09 16:28:27,965 - telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8165588443:AAHouVo8OuxnVoZJcBwT1jMMrQ6QuLiMIaE/getUpdates (Caused by ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026D5CD0A850>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)'))
+2024-10-09 16:28:27,965 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 144, in _new_conn
+    raise ConnectTimeoutError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.ConnectTimeoutError: (<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026D5CD0A850>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\utils\request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8165588443:AAHouVo8OuxnVoZJcBwT1jMMrQ6QuLiMIaE/getUpdates (Caused by ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026D5CD0A850>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\ext\updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\ext\updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\ext\extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\bot.py", line 2861, in get_updates
+    self._post(
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\bot.py", line 295, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\utils\request.py", line 356, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\utils\request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8165588443:AAHouVo8OuxnVoZJcBwT1jMMrQ6QuLiMIaE/getUpdates (Caused by ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026D5CD0A850>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)'))
+2024-10-09 16:28:38,997 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026D5CDBA910>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot8165588443:AAHouVo8OuxnVoZJcBwT1jMMrQ6QuLiMIaE/getUpdates
+2024-10-09 16:28:49,014 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026D5CDBAFD0>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot8165588443:AAHouVo8OuxnVoZJcBwT1jMMrQ6QuLiMIaE/getUpdates
+2024-10-09 16:28:59,037 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026D5CDBB590>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot8165588443:AAHouVo8OuxnVoZJcBwT1jMMrQ6QuLiMIaE/getUpdates
+2024-10-09 16:29:09,059 - telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8165588443:AAHouVo8OuxnVoZJcBwT1jMMrQ6QuLiMIaE/getUpdates (Caused by ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026D5CDBBA50>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)'))
+2024-10-09 16:29:09,060 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 140, in _new_conn
+    conn = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+           ^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 144, in _new_conn
+    raise ConnectTimeoutError(
+telegram.vendor.ptb_urllib3.urllib3.exceptions.ConnectTimeoutError: (<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026D5CDBBA50>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\utils\request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 691, in urlopen
+    return self.urlopen(method, url, body, headers, retries,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 376, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+telegram.vendor.ptb_urllib3.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8165588443:AAHouVo8OuxnVoZJcBwT1jMMrQ6QuLiMIaE/getUpdates (Caused by ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026D5CDBBA50>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\ext\updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\ext\updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\ext\extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\bot.py", line 2861, in get_updates
+    self._post(
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\bot.py", line 295, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\utils\request.py", line 356, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\utils\request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8165588443:AAHouVo8OuxnVoZJcBwT1jMMrQ6QuLiMIaE/getUpdates (Caused by ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x0000026D5CDBBA50>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)'))
+2024-10-09 16:29:32,702 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connectionpool.HTTPSConnectionPool object at 0x0000026D5CC96B10>, 'Connect timed out. (connect timeout=5.0)')': /bot8165588443:AAHouVo8OuxnVoZJcBwT1jMMrQ6QuLiMIaE/getUpdates
+2024-10-09 16:41:24,500 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2024-10-09 16:41:24,500 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2024-10-09 16:41:27,638 - telegram.ext.updater - WARNING - Exiting immediately!
+2024-10-09 16:41:36,104 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-09 16:45:25,720 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2024-10-09 16:45:25,720 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2024-10-09 16:45:35,244 - telegram.ext.updater - WARNING - Exiting immediately!
+2024-10-09 16:45:37,598 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-09 17:17:00,494 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2024-10-09 17:17:00,494 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2024-10-09 17:17:09,764 - telegram.ext.updater - WARNING - Exiting immediately!
+2024-10-09 17:17:19,700 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-09 17:33:12,932 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2024-10-09 17:33:12,932 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2024-10-09 17:33:25,293 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-09 17:50:33,612 - telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-10-09 17:50:33,612 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 294, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\utils\request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 347, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\packages\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 294, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+telegram.vendor.ptb_urllib3.urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\ext\updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\ext\updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\ext\extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\bot.py", line 2861, in get_updates
+    self._post(
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\bot.py", line 295, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\utils\request.py", line 356, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\utils\request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-10-09 17:51:13,521 - telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
+2024-10-09 17:51:13,522 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 319, in connect
+    self.sock = ssl_wrap_socket(
+                ^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\ssl_.py", line 324, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 1382, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\utils\request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 347, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\packages\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 360, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 857, in _validate_conn
+    super(HTTPSConnectionPool, self)._validate_conn(conn)
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 289, in _validate_conn
+    conn.connect()
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connection.py", line 319, in connect
+    self.sock = ssl_wrap_socket(
+                ^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\ssl_.py", line 324, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 1382, in do_handshake
+    self._sslobj.do_handshake()
+telegram.vendor.ptb_urllib3.urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\ext\updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\ext\updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\ext\extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\bot.py", line 2861, in get_updates
+    self._post(
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\bot.py", line 295, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\utils\request.py", line 356, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\utils\request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
+2024-10-09 17:52:17,905 - telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-10-09 17:52:17,906 - telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 294, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\utils\request.py", line 259, in _request_wrapper
+    resp = self._con_pool.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
+    return self.request_encode_body(method, url, fields=fields,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
+    retries = retries.increment(method, url, error=e, _pool=self,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 347, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\packages\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
+    httplib_response = self._make_request(conn, method, url,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 402, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 398, in _make_request
+    httplib_response = conn.getresponse()
+                       ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 1395, in getresponse
+    response.begin()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\http\client.py", line 294, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+telegram.vendor.ptb_urllib3.urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\ext\updater.py", line 646, in _network_loop_retry
+    if not action_cb():
+           ^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\ext\updater.py", line 597, in polling_action_cb
+    updates = self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\ext\extbot.py", line 222, in get_updates
+    updates = super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\bot.py", line 130, in decorator
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\bot.py", line 2861, in get_updates
+    self._post(
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\bot.py", line 295, in _post
+    return self.request.post(
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\utils\request.py", line 356, in post
+    result = self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Python\TG_bot\.venv\Lib\site-packages\telegram\utils\request.py", line 265, in _request_wrapper
+    raise NetworkError(f'urllib3 HTTPError {error}') from error
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-10-09 18:04:23,322 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2024-10-09 18:04:23,322 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2024-10-09 18:04:31,630 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-09 18:05:50,760 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2024-10-09 18:05:50,760 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2024-10-09 18:06:01,752 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-09 18:22:40,442 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2024-10-09 18:22:40,443 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2024-10-09 19:14:01,759 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-09 19:14:49,135 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2024-10-09 19:14:49,135 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2024-10-09 19:15:00,129 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-09 19:15:26,586 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2024-10-09 19:15:26,587 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2024-10-09 19:15:30,848 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-09 19:29:10,442 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-09 19:29:11,603 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-09 19:29:11,649 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-09 19:51:46,023 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2024-10-09 19:51:46,023 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2024-10-09 19:54:59,560 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-09 19:55:00,644 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-09 19:55:00,691 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-09 20:05:53,235 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-09 20:06:00,766 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-09 20:06:01,838 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-09 20:06:01,884 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-09 20:11:48,669 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2024-10-09 20:11:48,670 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2024-10-09 20:12:14,011 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-09 20:13:01,939 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-09 20:13:03,013 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-09 20:13:03,058 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-09 20:32:26,119 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2024-10-09 20:32:26,119 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2024-10-09 20:32:58,184 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-09 20:33:03,814 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-09 20:33:05,028 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-09 20:33:05,051 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-09 20:33:09,868 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-09 20:33:10,941 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-09 20:33:10,988 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-09 20:33:15,952 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-09 20:33:17,025 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-09 20:33:17,049 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-09 20:34:10,065 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2024-10-09 20:34:10,065 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2024-10-09 20:34:18,976 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-09 20:34:22,975 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-09 20:34:24,046 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-09 20:34:24,070 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-09 20:34:27,607 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-09 20:34:28,693 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-09 20:34:28,740 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-09 20:34:36,430 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-09 20:34:37,500 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-09 20:34:37,526 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-09 20:34:41,445 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-09 20:34:42,514 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-09 20:34:42,559 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-09 20:34:48,885 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-09 20:34:49,954 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-09 20:34:49,999 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-09 20:34:54,665 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-09 20:34:55,734 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-09 20:34:55,781 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-09 20:35:09,068 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-09 20:35:10,145 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-09 20:35:10,191 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-09 20:36:31,898 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-09 20:36:32,962 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-09 20:36:32,987 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-09 20:36:37,774 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-09 20:36:38,842 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-09 20:36:38,887 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-09 20:36:45,333 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-09 20:36:46,405 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-09 20:36:46,451 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-09 21:00:24,313 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-09 21:00:25,470 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-09 21:00:25,515 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-09 21:00:30,053 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-09 21:00:31,120 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-09 21:00:31,171 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-09 21:00:38,280 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-09 21:00:39,354 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-09 21:00:39,400 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-09 21:02:05,468 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-09 21:02:06,543 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-09 21:02:06,589 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-09 21:22:49,287 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2024-10-09 21:22:49,287 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2024-10-09 21:46:41,854 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-09 21:48:44,363 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2024-10-09 21:48:44,363 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2024-10-09 21:48:48,940 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-09 21:56:02,494 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2024-10-09 21:56:02,494 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2024-10-09 21:56:12,534 - telegram.ext.updater - WARNING - Exiting immediately!
+2024-10-10 03:12:57,054 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-10 03:13:45,897 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:13:47,815 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:13:47,859 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:13:50,851 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:13:52,461 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:13:52,507 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:13:59,954 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:14:03,137 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:14:03,184 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:14:16,744 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:14:17,809 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:14:17,854 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:14:24,516 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:14:25,978 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:14:26,023 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:14:30,707 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:14:32,242 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:14:32,288 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:16:36,403 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2024-10-10 03:16:36,403 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2024-10-10 03:16:39,267 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-10 03:16:48,284 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:16:49,356 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:16:49,402 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:16:57,307 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:16:58,392 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:16:58,416 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:17:03,654 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:17:04,718 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:17:04,764 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:17:13,218 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:17:14,587 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:17:14,638 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:17:18,475 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:17:20,098 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:17:20,143 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:17:21,446 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:17:22,512 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:17:22,535 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:19:06,911 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2024-10-10 03:19:06,912 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2024-10-10 03:19:14,377 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-10 03:19:24,904 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:19:26,324 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:19:26,370 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:19:32,266 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:19:33,439 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:19:33,497 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:19:35,242 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:19:36,307 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:19:36,331 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:20:08,663 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:20:10,065 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:20:10,112 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:20:13,821 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:20:15,835 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:20:15,859 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:20:17,301 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:20:18,449 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:20:18,495 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:23:07,155 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2024-10-10 03:23:07,155 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2024-10-10 03:23:12,667 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-10 03:23:18,962 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:23:22,045 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:23:22,091 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:23:28,227 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:23:30,122 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:23:30,168 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:23:32,015 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:23:33,516 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:23:33,539 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:23:41,721 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:23:42,784 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:23:42,837 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:25:00,073 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2024-10-10 03:25:00,073 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2024-10-10 03:25:05,672 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-10 03:25:14,337 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:25:15,406 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:25:15,431 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:31:41,207 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2024-10-10 03:31:41,207 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2024-10-10 03:32:02,142 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-10 03:32:18,812 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:32:19,883 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:32:19,947 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:37:10,407 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2024-10-10 03:37:10,408 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2024-10-10 03:37:21,658 - apscheduler.scheduler - INFO - Scheduler started
+2024-10-10 03:37:32,812 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:37:33,882 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:37:33,928 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:51:53,659 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:51:54,732 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:51:54,777 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:52:06,873 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:52:07,977 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:52:08,015 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:52:33,196 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:52:34,264 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:52:34,288 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:53:28,210 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:53:29,301 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:53:29,347 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:53:59,293 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:54:00,849 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:54:00,872 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:55:36,476 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:55:38,777 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:55:38,822 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:56:04,677 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_9.9p1)
+2024-10-10 03:56:05,744 - paramiko.transport - INFO - Authentication (publickey) failed.
+2024-10-10 03:56:05,768 - paramiko.transport - INFO - Authentication (password) successful!
+2024-10-10 03:58:27,964 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2024-10-10 03:58:27,965 - apscheduler.scheduler - INFO - Scheduler has been shut down
