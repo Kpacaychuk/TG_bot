@@ -114,7 +114,7 @@ def get_uptime(update: Update, context: CallbackContext):
         if release_info:
             update.message.reply_text(f"{release_info}")
         else:
-            update.message.reply_text("Не удалось получить информацию о релизе.")
+            update.message.reply_text("Не удалось получить информацию.")
     except Exception as e:
         update.message.reply_text(f"Ошибка: {str(e)}")
     finally:
