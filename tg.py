@@ -6,6 +6,8 @@ from dotenv import load_dotenv
 from telegram import Update
 from telegram.ext import CallbackContext, Updater, CommandHandler, MessageHandler, Filters, ConversationHandler
 
+load_dotenv()
+
 TOKEN = os.getenv('TOKEN')
 hostname = os.getenv('RM_HOST')
 port = os.getenv('RM_PORT')
@@ -25,26 +27,50 @@ def start(update: Update, context):
 def helpCommand(update: Update, context):
     update.message.reply_text('Help!')
 
-def findPhoneNumbersCommand(update: Update, context):
+def findPhoneNumbersCommand(update: Update, context: CallbackContext):
     update.message.reply_text('Введите текст для поиска телефонных номеров: ')
-    return 'findPhoneNumbers'
+    return FIND
 
-def findPhoneNumbers (update: Update, context):
+def findPhoneNumbers (update: Update, context: CallbackContext):
     user_input = update.message.text
     phoneNumRegex = re.compile(r'\+?[87][ -]?\(?\d{3}\)?[ -]?\d{3}[ -]?\d{2}[ -]?\d{2}')
     phoneNumberList = phoneNumRegex.findall(user_input)
     if not phoneNumberList:
         update.message.reply_text('Телефонные номера не найдены')
-        return 
+        return ConversationHandler.END
     phoneNumbers = ''
     for i in range(len(phoneNumberList)):
         phoneNumbers += f'{i+1}. {phoneNumberList[i]}\n'
-    update.message.reply_text(phoneNumbers)
+    update.message.reply_text(f"{phoneNumbers}")
+    context.user_data['phoneNumberList'] = phoneNumberList
+    update.message.reply_text('Записать список найденных номеров телефона в бд?\nНапишите 1 или 2\n1. Да\n2. Нет (По умолчанию)')
+    return CHOOSE_DB
+    
+def choose_db (update: Update, context: CallbackContext):
+    user_input = update.message.text
+    phoneNumberList = context.user_data.get('phoneNumberList', [])
+    if user_input == '1':
+        port = 40000
+        try:
+            client = paramiko.SSHClient()
+            client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+            client.connect(hostname, port, username, password)
+            for phone in phoneNumberList:
+                stdin, stdout, stderr = client.exec_command(
+                    f"psql -d tg_bot -c \"insert into phone_numbers (phone_number) values ('{phone}');\""
+                )
+            update.message.reply_text("Данные успешно добавлены в БД.")
+        except Exception as e:
+            update.message.reply_text(f"Ошибка при добавлении данных в БД: {str(e)}")
+        finally:
+            client.close()
+    else:
+        update.message.reply_text("Данные не записаны.")
     return ConversationHandler.END
 
 def findEmailCommand(update: Update, context):
     update.message.reply_text('Введите текст для поиска email-адресов: ')
-    return 'findEmails'
+    return FIND_EMAIL
 
 def findEmails(update: Update, context):
     user_input = update.message.text
@@ -57,9 +83,34 @@ def findEmails(update: Update, context):
     for i in range(len(emailList)):
         emails += f'{i+1}. {emailList[i]}\n'
     update.message.reply_text(emails)
+    context.user_data['emailList'] = emailList
+    update.message.reply_text('Записать список найденных электронных почт в бд?\nНапишите 1 или 2\n1. Да\n2. Нет (По умолчанию)')
+    return CHOOSE_DB_EMAIL
+
+def choose_bd_email (update: Update, context: CallbackContext):
+    user_input = update.message.text
+    emailList = context.user_data.get('emailList', [])
+    if user_input == '1':
+        port = 40000
+        try:
+            client = paramiko.SSHClient()
+            client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+            client.connect(hostname, port, username, password)
+            for email in emailList:
+                stdin, stdout, stderr = client.exec_command(
+                    f"psql -d tg_bot -c \"insert into emails (email) values ('{email}');\""
+                )
+            update.message.reply_text("Данные успешно добавлены в БД.")
+        except Exception as e:
+            update.message.reply_text(f"Ошибка при добавлении данных в БД: {str(e)}")
+        finally:
+            client.close()
+    else:
+        update.message.reply_text("Данные не записаны.")
     return ConversationHandler.END
 
 def checkPasswordCommand(update: Update, context):
+
     update.message.reply_text('Введите пароль для проверки его сложности: ')
     return 'checkPassword'
 
@@ -321,6 +372,57 @@ def get_services(update: Update, context: CallbackContext):
     finally:
         client.close()
 
+def get_repl_logs(update: Update, context: CallbackContext):
+    port = 40000
+    try:
+        client = paramiko.SSHClient()
+        client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+        client.connect(hostname, port, username, password)
+        stdin, stdout, stderr = client.exec_command('tail -n 10 /var/log/postgresql/postgresql-13-main.log')
+        release_info = stdout.read().decode('utf-8')
+        if release_info:
+            update.message.reply_text(f"{release_info}")
+        else:
+            update.message.reply_text("Не удалось получить информацию.")
+    except Exception as e:
+        update.message.reply_text(f"Ошибка: {str(e)}")
+    finally:
+        client.close()
+
+def get_emails(update: Update, context: CallbackContext):
+    port = 40000
+    try:
+        client = paramiko.SSHClient()
+        client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+        client.connect(hostname, port, username, password)
+        stdin, stdout, stderr = client.exec_command('psql -d tg_bot -c \'select * from emails;\'')
+        release_info = stdout.read().decode('utf-8')
+        if release_info:
+            update.message.reply_text(f"{release_info}")
+        else:
+            update.message.reply_text("Не удалось получить информацию.")
+    except Exception as e:
+        update.message.reply_text(f"Ошибка: {str(e)}")
+    finally:
+        client.close()
+
+def get_phone_numbers(update: Update, context: CallbackContext):
+    port = 40000
+    try:
+        client = paramiko.SSHClient()
+        client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+        client.connect(hostname, port, username, password)
+        stdin, stdout, stderr = client.exec_command('psql -d tg_bot -c \'select * from phone_numbers;\'')
+        release_info = stdout.read().decode('utf-8')
+        if release_info:
+            update.message.reply_text(f"{release_info}")
+        else:
+            update.message.reply_text("Не удалось получить информацию.")
+    except Exception as e:
+        update.message.reply_text(f"Ошибка: {str(e)}")
+    finally:
+        client.close()
+
 def echo(update: Update, context):
     update.message.reply_text(update.message.text)
 
@@ -328,7 +430,7 @@ def cancel(update: Update, context: CallbackContext):
     update.message.reply_text("Команда отменена.")
     return ConversationHandler.END
 
-CHOOSING, GET_PACKAGE, SEARCH_PACKAGE = range(3)
+CHOOSING, GET_PACKAGE, SEARCH_PACKAGE, CHOOSE_DB, FIND, CHOOSE_DB_EMAIL, FIND_EMAIL = range(7)
 
 def main():
     updater = Updater(TOKEN, use_context=True)
@@ -337,14 +439,16 @@ def main():
     convHandlerFindPhoneNumbers = ConversationHandler(
         entry_points=[CommandHandler('find_phone_number', findPhoneNumbersCommand)],
         states={
-            'findPhoneNumbers': [MessageHandler(Filters.text & ~Filters.command, findPhoneNumbers)],
+            FIND: [MessageHandler(Filters.text & ~Filters.command, findPhoneNumbers)],
+            CHOOSE_DB: [MessageHandler(Filters.text & ~Filters.command, choose_db)],
         },
-        fallbacks=[]
+        fallbacks=[CommandHandler('cancel', cancel)]
     )
     convHandlerFindEmail = ConversationHandler(
         entry_points=[CommandHandler('find_email', findEmailCommand)],
         states={
-            'findEmails': [MessageHandler(Filters.text & ~Filters.command, findEmails)],
+            FIND_EMAIL: [MessageHandler(Filters.text & ~Filters.command, findEmails)],
+            CHOOSE_DB_EMAIL: [MessageHandler(Filters.text & ~Filters.command, choose_bd_email)],
         },
         fallbacks=[]
     )
@@ -381,6 +485,9 @@ def main():
     dp.add_handler(CommandHandler("get_ss", get_ss))
     dp.add_handler(conv_handler)
     dp.add_handler(CommandHandler("get_services", get_services))
+    dp.add_handler(CommandHandler("get_repl_logs", get_repl_logs))
+    dp.add_handler(CommandHandler("get_emails", get_emails))
+    dp.add_handler(CommandHandler("get_phone_numbers", get_phone_numbers))
     dp.add_handler(MessageHandler(Filters.text & ~Filters.command, echo))
     updater.start_polling()
     updater.idle()
